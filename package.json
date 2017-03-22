@@ -1,0 +1,27 @@
+{
+  "name": "comp1073-lesson10",
+  "version": "1.0.0",
+  "description": "Demo web app for lesson 10",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jdusome/Lesson10-CSScripting.git"
+  },
+  "keywords": [
+    "JavaScript",
+    "JQuery",
+    "TypeScript"
+  ],
+  "author": "Josh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jdusome/Lesson10-CSScripting/issues"
+  },
+  "homepage": "https://github.com/jdusome/Lesson10-CSScripting#readme",
+  "devDependencies": {
+    "@types/jquery": "^2.0.41"
+  }
+}

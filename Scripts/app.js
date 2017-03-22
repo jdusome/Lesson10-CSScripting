@@ -113,13 +113,14 @@
         };
         // STEP 5 - wait until data is finished loading before injecting it
         XHR.addEventListener("load", function () {
-            var gameListBody = document.getElementById("gameListBody");
+            // let gameListBody = document.getElementById("gameListBody");
+            var gameListBody = $("#gameListBody");
             // for each game in data.games repeat
             data.games.forEach(function (game) {
                 // inject a "template row" inside the dataRows div tag
                 var newRow = document.createElement("tr");
                 newRow.innerHTML = "\n          <td>" + game.name + "</td>\n          <td class=\"text-center\">" + game.cost + "</td>\n          <td class=\"text-center\">" + game.rating + "</td>\n        ";
-                gameListBody.appendChild(newRow);
+                gameListBody[0].appendChild(newRow);
             }, this);
         });
     }
@@ -167,7 +168,11 @@
         var ContactNumber = document.getElementById("ContactNumber");
         var Email = document.getElementById("Email");
         var Message = document.getElementById("Message");
-        var SendButton = document.getElementById("SendButton");
+        // let SendButton = document.getElementById("SendButton"); --Vanilla JS
+        //this returns an array, so you can actually pinpoint the element you want by saying [0]
+        var SendButton = $("#SendButton")[0]; //--JQuery
+        //let SendButton = document.querySelectorAll("#SendButton")[0];
+        console.log(SendButton.textContent);
         SendButton.addEventListener("click", function (event) {
             event.preventDefault();
             console.log(FullName);
