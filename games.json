@@ -1,0 +1,19 @@
+{
+  "games": [
+    {
+      "name": "Fallout 4",
+      "cost": 69.99,
+      "rating": 4.3
+    },
+    {
+      "name": "Overwatch",
+      "cost": 49.99,
+      "rating": 4.5
+    },
+    {
+      "name": "Horizon Zero Dawn",
+      "cost": 69.99,
+      "rating": 4.1
+    }
+  ]
+}

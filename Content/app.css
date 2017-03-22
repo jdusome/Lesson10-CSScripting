@@ -1,0 +1,15 @@
+/* custom css lives here */
+
+body {
+  padding-bottom: 70px;
+  }
+
+.divider {
+  margin: 15px 0px;
+  border: 1px solid black;
+}
+
+#FirstProjectImage {
+  max-height: 200px;
+  width: 300px;
+}

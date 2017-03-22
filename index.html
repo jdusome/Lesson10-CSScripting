@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home</title>
+  <!-- CSS Section -->
+  <link rel="stylesheet" href="./Scripts/lib/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./Scripts/lib/bootstrap/dist/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="./Scripts/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./Content/app.css">
+</head>
+
+<body>
+  <div id="mainNav"></div>
+
+  <!-- Main Content -->
+  <div class="container" id="MainContentDiv">
+    <div class="row">
+      <div class="col-md-offset-3 col-md-6">
+        <h1>Game List</h1>
+        <table class="table table-striped table-bordered table-hover">
+          <tbody id="gameListBody">
+            <tr>
+              <th>Name</th>
+              <th class="text-center">Cost</th>
+              <th class="text-center">Rating</th>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <nav class="navbar navbar-default navbar-fixed-bottom">
+    <div class="container">
+      <h4>&copy 2017 - COMP1073 - All Rights Reserved.</h2>
+    </div>
+  </nav>
+
+  <!-- JavaScript Section -->
+  <script src="./Scripts/lib/jquery/dist/jquery.min.js"></script>
+  <script src="./Scripts/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="./Scripts/collections/games.js"></script>
+  <script src="./Scripts/objects/Vehicle.js"></script>
+  <script src="./Scripts/objects/Car.js"></script>
+  <script src="./Scripts/objects/Point.js"></script>
+  <script src="./Scripts/app.js"></script>
+</body>
+
+</html>
