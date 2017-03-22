@@ -1,7 +1,21 @@
 /* javascript lives here */
 "use strict";
-// IIFE - Immediately Invoked Function Expression
+// IIFE - Immediately Invoked Function Expression - JavaScript - ES5
 (function () {
+
+    // $().ready(function() {}); THIS IS JQUERY IIFE SYNTAX
+
+    //our regular IIFE doesn't wait for the window to be ready, if we wanted it to... it would be like
+    //let mainFUnction = IIFE
+    //window.onload = mainFunction;
+
+    //IIFE - JavaScript ES6
+    /*
+    (()=>{
+
+    })();
+    */
+
     /// <reference path="../objects/Vehicle.ts"/>
     /// <reference path="../objects/Car.ts"/>
     /// <reference path="../objects/Point.ts"/>
@@ -13,7 +27,10 @@
     }
     // Loads the Main Navigation using AJAX
     function LoadNavBar() {
-        var mainNav = document.getElementById("mainNav");
+        // var mainNav = document.getElementById("mainNav");
+
+        var mainNav = $("#mainNav")[0];
+
         var navbarHTML;
         // STEP 1 - need an XHR object
         var navXHR = new XMLHttpRequest();
@@ -133,11 +150,39 @@
         var ShowButton = document.getElementById("ShowButton");
         var FirstProjectImage = document.getElementById("FirstProjectImage");
         var ButtonArray = [HideButton, HalfSizeButton, ThreeQuarterSizeButton, ShowButton];
-        // loop through the array of butttons
+
+        //JQuery way of doing it
+        let buttons = $("button");
+        buttons.click(ButtonClick);
+
+        buttons.attr("class","btn btn-danger btn-lg");
+
+        //the first one will trigger when you hover over, and the second when you hover out
+        buttons.hover(
+        function(){
+            $(this).attr("class","btn-success btn-lg");
+        },
+        function(){
+            $(this).attr("class","btn-danger btn-lg");
+        }
+        );
+
+        //this is for each button, run this function
+        //if you hover of the function with our code hinting, we can figure out it returns index and element
+        buttons.each(function(index, elem){
+            buttons.css("color", "yellow");
+        });
+
+        // $("button").click(ButtonClick);
+
+        /*
         ButtonArray.forEach(function (button) {
             // set an event listener for each button
             button.addEventListener("click", ButtonClick);
+            // $(button).click(ButtonClick); //this is the jQuery way
         }, this);
+        */
+
         // Use one named function, ButtonClick to respond to each of the buttons
         function ButtonClick(event) {
             // store which button has been clicked in currentButton
@@ -180,8 +225,18 @@
             console.log(Email);
             console.log(Message);
         });
+
+        //get all input elements with the type of text
+        $("input").dblclick(function(){
+            $(this).val("");//clear the text box
+        });
+
+        $("input").on("dblclick", function(){
+            $(this).css("background-color","red");
+        });
     }
     // call the Start function when the window loads
     window.onload = Start; // Start is the callback function / event handler
 })(); // end of the IIFE
 //# sourceMappingURL=app.js.map
+
